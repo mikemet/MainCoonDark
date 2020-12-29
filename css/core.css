@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* для плавности анимации перехода (стрелка в блоке header) */
+}
+
+body {
+    font-family: 'roboto', Times, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    overflow-wrap: break-word;
+    /* перенос слов на другую строку */
+    background-color: #000000;
+}
+
+/* =============================================================== */
+:root {
+    --base-scale: calc(100vw / 75);
+    --h1-font-size: max(2em, min(4em, calc(var(--base-scale) * 4)));
+    --lightBrown: #A07B50;
+    --linkColorHover: deepskyblue;
+}
+
+/* ============================================================ */
+
+.container-fluid {
+    position: relative;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    /*центрируем блок*/
+    background-color: #000000;
+    color: #ffffff;
+    z-index: 1;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    border-top: 1px solid var(--lightBrown);
+}
+
+.navbar,
+#navbarHeader {
+    background-color: #000000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-toggler {
+    color: #ffffff;
+}
