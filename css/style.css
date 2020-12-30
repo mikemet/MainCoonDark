@@ -28,6 +28,8 @@ body {
     overflow-wrap: break-word;
     /* перенос слов на другую строку */
     background-color: #000000;
+    /* height: 100vh; */
+    position: relative;
 }
 
 /* ============================================= */
@@ -50,7 +52,7 @@ img {
 
 a {
     text-decoration: none;
-    color: bisque;
+    color: #ffffff;
 }
 
 a:hover {
@@ -61,12 +63,10 @@ a:hover {
 /* =======================================  header  ========================================== */
 .header {
     display: flex;
-    display: -webkit-flex;
     justify-content: space-between;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-top: 1rem;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 
 .about {
@@ -75,7 +75,8 @@ a:hover {
 
 .about h4,
 .contact h4 {
-    margin-bottom: 0.7rem;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .phone {
@@ -97,10 +98,60 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
+.content {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    align-self: center;
+}
+
+.content p {
+    color: var(--lightBrown);
+}
+
+.content p:first-child {
+    margin-bottom: 1rem;
+}
+
+.content p:nth-child(3) {
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.content h1 {
+    font-family: 'yesevaone-regular';
+    font-weight: 200;
+}
+
+.content a {
+    /* display: block; */
+    padding: 1rem 2rem;
+    border: 1px solid #ffffff;
+}
+
+.content a:hover {
+    border-color: var(--linkColorHover);
+}
+
 /* =========================================  footer  ======================================== */
 .footer {
     position: absolute;
     left: 2rem;
-    /* bottom: 0.4rem; */
-    border-top: 1px solid var(--lightBrown);
+    bottom: 2%;
+}
+
+/* ===========================================  @media  ========================================= */
+@media (max-width: 640px) {
+    .header {
+        margin-bottom: 1rem;
+    }
+
+    .about {
+        flex-basis: 100%;
+    }
+
+    .content {
+        text-align: center;
+        padding-left: 0;
+    }
 }
