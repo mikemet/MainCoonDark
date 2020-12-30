@@ -1,4 +1,106 @@
-@import url("core.css");
-@import url("fonts.css");
-@import url("blocks/index.css");
-@import url("blocks/gallary.css");
+@font-face {
+    src: url('/fonts/Roboto-Regular.ttf');
+    font-family: 'roboto-regular';
+}
+
+@font-face {
+    src: url('/fonts/YesevaOne-Regular_v2.otf');
+    font-family: 'yesevaone-regular';
+}
+
+/* ==================================  global  =========================================== */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'roboto-regular', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    color: #ffffff;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* для плавности анимации перехода (стрелка в блоке header) */
+    overflow-wrap: break-word;
+    /* перенос слов на другую строку */
+    background-color: #000000;
+}
+
+/* ============================================= */
+:root {
+    --base-scale: calc(100vw / 75);
+    --h1-font-size: max(2em, min(4em, calc(var(--base-scale) * 4)));
+    --lightBrown: #A07B50;
+    --linkColorHover: deepskyblue;
+}
+
+/* ============================================= */
+h1 {
+    font-size: var(--h1-font-size);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: bisque;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--linkColorHover);
+}
+
+/* =======================================  header  ========================================== */
+.header {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    /* flex-wrap: wrap; */
+}
+
+.about {
+    flex-basis: 70%;
+}
+
+.about h4,
+.contact h4 {
+    margin-bottom: 0.7rem;
+}
+
+.phone {
+    display: inline-flex;
+    margin-bottom: 0.5rem;
+}
+
+.phone i {
+    margin-right: 0.6rem;
+}
+
+.social i {
+    margin-right: 0.5rem;
+}
+
+/* ======================================  index page  ===================================== */
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* =========================================  footer  ======================================== */
+.footer {
+    position: absolute;
+    left: 2rem;
+    /* bottom: 0.4rem; */
+    border-top: 1px solid var(--lightBrown);
+}
