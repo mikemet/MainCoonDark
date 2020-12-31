@@ -159,11 +159,20 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+.thumb img {
+    filter: grayscale(0);
+}
+
+.thumb img:hover {
+    filter: grayscale(100%);
+    border: 2px solid #ffffff;
+}
+
 #scrollToTopBtn {
     position: absolute;
     right: 2rem;
     bottom: 1rem;
-    padding: 0.8rem;
+    padding: 0.4rem 0.8rem;
     border: 1px solid #ffffff;
     border-radius: 3px;
 }
@@ -180,6 +189,12 @@ a:hover {
 }
 
 /* ===========================================  @media  ========================================= */
+@media (max-width: 541px) {
+    .galery_main {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 640px) {
     .header {
         margin-bottom: 1rem;
