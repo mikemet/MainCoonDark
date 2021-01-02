@@ -24,11 +24,8 @@ body {
     color: #ffffff;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    /* для плавности анимации перехода (стрелка в блоке header) */
     overflow-wrap: break-word;
-    /* перенос слов на другую строку */
     background-color: #000000;
-    /* height: 100vh; */
     position: relative;
 }
 
@@ -68,11 +65,33 @@ a:hover {
 
 /* =======================================  header  ========================================== */
 .header {
-    display: flex;
-    justify-content: space-between;
+    padding-top: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    position: relative;
+}
+
+.dropmenu {
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding-right: 2rem;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    padding-bottom: 2rem;
+}
+
+.dropbtn {
+    position: absolute;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
 }
 
 .about {
