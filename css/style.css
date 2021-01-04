@@ -171,9 +171,8 @@ a:hover {
 
 .galery_main {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
