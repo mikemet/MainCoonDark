@@ -43,8 +43,7 @@ h1 {
     font-weight: 200;
 }
 
-h1,
-h4 {
+h1 {
     font-family: 'yesevaone-regular';
 }
 
@@ -102,6 +101,10 @@ a:hover {
 .contact h4 {
     padding-top: 1rem;
     margin-bottom: 0.5rem;
+}
+
+.about span {
+    color: var(--linkColorHover);
 }
 
 .phone {
